@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    n = int(input().strip())
+    n = int(input())
     if n%2 == 0:
         if n in range(2,6) or n > 20:
             print("Not Weird")
