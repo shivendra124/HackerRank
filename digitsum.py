@@ -1,23 +1,19 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-from collections import Counter
+def digitsSum(j):
+    ##Your code here
+    res=0
+    while j>0:
+        res+=j%10
+        j=j//10
+    return res
+def main():
+    testcases=int(input()) #testcases
+    while(testcases>0):
+        a=int(input())
+        print(digitsSum(a))
+        testcases-=1
+        
 
 
-n = int(input())
-
-lst = list((map(int,input().split(" "))))
-    
-mean = sum(lst)/n
-lst.sort()
-median = None
-if n%2==0:
-    median = (lst[int(len(lst)/2-1)]+lst[int(len(lst)/2)])/2
-else:
-    median = round(len(lst)/2)    
-res = Counter(lst)
-mode = res.most_common(1)[0][0]
-
-print(mean)
-print(median)
-print(mode)
-
-
+if __name__=='__main__':
+    main()
+        
